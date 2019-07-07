@@ -6,5 +6,10 @@ axios({
   params: {
     a: 1,
     b: 2
+  },
+  data: {
+    a: 1,
+    b: 2,
+    arr: new Int32Array([16, 31])
   }
 })
