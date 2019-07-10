@@ -14,7 +14,7 @@ function encode(val: string): string {
     .replace(/%5D/ig, ']')
 }
 
-export function buildURL(url: string, params? : any): string {
+export function buildURL(url: string, params ? : any): string {
   if (!params) {
     return url;
   }
@@ -50,8 +50,9 @@ export function buildURL(url: string, params? : any): string {
     if (marIndex !== -1) {
       url = url.slice(0, marIndex);
     }
-    url += (url.indexOf('?') === -1? '?': '&') + serializedParams
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams
   }
 
   return url;
 }
+
