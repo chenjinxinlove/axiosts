@@ -1,4 +1,4 @@
-import { AxiosTransformer } from "../types";
+import { AxiosTransformer } from '../types'
 
 export default function transform(
   data: any,
@@ -6,13 +6,13 @@ export default function transform(
   fns?: AxiosTransformer | AxiosTransformer[]
 ): any {
   if (!fns) {
-    return data;
+    return data
   }
   if (!Array.isArray(fns)) {
-    fns = [fns];
+    fns = [fns]
   }
   fns.forEach(fn => {
-    data = fn(data, headers);
+    data = fn(data, headers)
   })
-  return data;
+  return data
 }
